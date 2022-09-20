@@ -10,4 +10,5 @@ const time4 = document.getElementById ('four');
 const time5 = document.getElementById ('five');
 const saveBtnArr = document.querySelectorAll ('button');
 
-var currentDay = new Date();
+var today = moment();
+$("#currentDay").text(today.format("dddd, MMM Do, YYYY"));
