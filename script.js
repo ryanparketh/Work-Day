@@ -9,3 +9,5 @@ const time3 = document.getElementById ('three');
 const time4 = document.getElementById ('four');
 const time5 = document.getElementById ('five');
 const saveBtnArr = document.querySelectorAll ('button');
+
+var currentDay = new Date();
