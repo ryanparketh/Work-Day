@@ -19,7 +19,6 @@ const saveAct= $('.saveBtn');
 
 // }
 // abc()
-$(this).next().children().text(localStorage.getItem(`todo ${i}`)|| '');
 
 //added to allow the time dictate what the color of each box will be
 hour.each (function (i){
