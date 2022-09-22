@@ -9,16 +9,16 @@ const timeofDay = moment().hours();
 const hour = $('.hour');
 const saveAct = $('.saveBtn');
 
-function abc() {
-    for (i = 8; i < 18; i++) {
-        $(this).next().children().text(localStorage.getItem(`todo ${i}`)|| '');
-        // var currentNote = localStorage.getItem('${i}');
-        // if (currentNote) {
+// function abc() {
+//     for (i = 8; i < 18; i++) {
+//         // var currentNote = localStorage.getItem('${i}');
+//         // if (currentNote) {
 
-        }
-    }
+//         }
+//     }
 
-abc()
+// abc()
+
 
 //added local storage
 function saveNote(event) {
