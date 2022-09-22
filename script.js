@@ -13,15 +13,17 @@
 // added in the current date to display at the top of the page under h1
 var today = moment();
 $("#currentDay").text(today.format("dddd, MMMM Do"));
+let saveButtonsEl = document.querySelectorAll('.saveBtn');
+var notesEL = document.querySelectorAll('.note');
 
 
-const timeofDay = moment().format();
+const timeofDay = moment().hours();
 const hour = $('.hour');
 const saveAct= $('.saveBtn');
 
 hour.each (function (i){
-  let time =  parseInt($(this).attr('id'));
-  console.log(time);
+  let time =  parseInt($(this).parent().attr('id'));
+
     if (time < timeofDay){ 
         $(this).next().addClass('past');
     }
@@ -31,4 +33,16 @@ hour.each (function (i){
     }else{
         $(this).next().addClass('future');
     }
-    });
+});
+
+function saveNote(event){
+    var parentNode = event.target.parentNode;
+    var noteEl = parentNode.querySelector('.note');
+
+    localStorage.setItem(parentNode.id, noteEl.value)
+}
+
+
+saveButtonsEl.forEach(function(button){
+    button.addEventListener('click', saveNote);
+});
